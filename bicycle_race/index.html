@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>3D Bicycle Racing</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="game-container"></div>
+    
+    <div id="ui-layer">
+        <div id="hud" class="hidden">
+            <div id="speedometer">0 km/h</div>
+            <div id="lap-counter">Lap 1/3</div>
+            <div id="position-display">Pos: 1/4</div>
+            <div id="timer">00:00.00</div>
+        </div>
+
+        <div id="start-screen" class="screen">
+            <h1>Bicycle Rush 3D</h1>
+            <p>WASD / Arrows to Drive | Space to Brake | Shift to Sprint</p>
+            <button id="start-btn">Start Race</button>
+            <div id="instructions">
+                <p>Avoid obstacles and beat the opponents!</p>
+            </div>
+        </div>
+
+        <div id="pause-screen" class="screen hidden">
+            <h1>Paused</h1>
+            <button id="resume-btn">Resume</button>
+            <button id="restart-btn">Restart</button>
+        </div>
+
+        <div id="results-screen" class="screen hidden">
+            <h1>Race Finished!</h1>
+            <div id="final-rank">1st Place</div>
+            <div id="best-lap">Best Lap: --:--.--</div>
+            <button id="play-again-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
